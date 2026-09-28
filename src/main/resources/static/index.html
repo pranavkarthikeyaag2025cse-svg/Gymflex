@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111411">
+  <title>GymFlex | Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+  <script src="/js/dashboard.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="GymFlex dashboard"><span class="brand-mark">G</span><span>GYM<span class="brand-accent">FLEX</span><small>MEMBER OPERATIONS</small></span></a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="primary-nav">
+        <a href="/" data-nav="dashboard"><span class="nav-icon">▦</span>Dashboard</a>
+        <a href="/members.html" data-nav="members"><span class="nav-icon">◉</span>Members</a>
+        <a href="/add-member.html" data-nav="add-member"><span class="nav-icon">＋</span>Add member</a>
+        <a href="/plans.html" data-nav="plans"><span class="nav-icon">▤</span>Plans</a>
+        <a href="/checkin.html" data-nav="checkin"><span class="nav-icon">↳</span>Check-in</a>
+        <a href="/attendance.html" data-nav="attendance"><span class="nav-icon">▥</span>Attendance</a>
+        <a href="/expiring.html" data-nav="expiring"><span class="nav-icon">◷</span>Expiring soon</a>
+      </nav>
+      <div class="sidebar-foot"><span class="status-dot"></span> SYSTEM ONLINE <span class="version">v1.0</span></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle navigation">☰</button><div class="breadcrumb">GYMFLEX <span>/</span> OVERVIEW</div><div class="topbar-right"><span class="live-label"><i></i> LIVE OVERVIEW</span><span class="top-avatar">GF</span></div></header>
+      <section class="page-content">
+        <div class="page-heading"><div><p class="eyebrow"><span id="today-label">TODAY</span></p><h1>Dashboard<span class="heading-period">.</span></h1><p class="page-subtitle">Your gym, at a glance.</p></div><a class="button button-primary" href="/add-member.html"><span>＋</span> Add member</a></div>
+        <div class="stats-grid">
+          <article class="stat-card stat-main"><div class="stat-top"><span>Total members</span><span class="stat-glyph">◉</span></div><strong id="total-members">—</strong><div class="stat-foot"><span class="stat-marker"></span>REGISTERED IN GYMFLEX</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Active members</span><span class="stat-glyph green">↗</span></div><strong id="active-members">—</strong><div class="stat-foot">MEMBERSHIP IN GOOD STANDING</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Expired</span><span class="stat-glyph red">!</span></div><strong id="expired-members">—</strong><div class="stat-foot">RENEWALS TO FOLLOW UP</div></article>
+          <article class="stat-card"><div class="stat-top"><span>Expiring in 7 days</span><span class="stat-glyph amber">◷</span></div><strong id="expiring-members">—</strong><div class="stat-foot"><a href="/expiring.html">VIEW EXPIRING MEMBERS <span>→</span></a></div></article>
+        </div>
+        <section class="content-panel checkin-panel"><div class="panel-heading"><div><p class="eyebrow">TODAY AT THE GYM</p><h2>Check-ins</h2></div><div class="today-count"><strong id="today-checkins">—</strong><span>today</span></div></div><div class="panel-rule"></div><div id="recent-checkins" class="activity-list"><div class="loading-state">Loading attendance…</div></div><a class="panel-link" href="/attendance.html">OPEN ATTENDANCE LOG <span>→</span></a></section>
+      </section>
+    </main>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+</body>
+</html>

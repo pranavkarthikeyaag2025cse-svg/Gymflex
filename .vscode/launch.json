@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch GymFlex",
+      "request": "launch",
+      "mainClass": "com.gymflex.GymFlexApplication",
+      "projectName": "gymflex"
+    }
+  ]
+}
